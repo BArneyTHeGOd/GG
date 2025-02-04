@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure body covers full viewport height */
     margin: 0;
 }
 
@@ -50,20 +50,22 @@ button:hover {
 }
 
 @keyframes rainbow-strobe {
-    0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); } /* Red */
-    10% { box-shadow: 0 0 10px hsl(60, 100%, 50%); } /* Orange */
-    20% { box-shadow: 0 0 10px hsl(120, 100%, 50%); } /* Yellow */
-    30% { box-shadow: 0 0 10px hsl(180, 100%, 50%); } /* Green */
-    40% { box-shadow: 0 0 10px hsl(240, 100%, 50%); } /* Blue */
-    50% { box-shadow: 0 0 10px hsl(300, 100%, 50%); } /* Violet */
-    60% { box-shadow: 0 0 10px hsl(360, 100%, 50%); } /* Back to red */
-    70% { box-shadow: 0 0 10px hsl(420, 100%, 50%); } /* Orange */
-    80% { box-shadow: 0 0 10px hsl(480, 100%, 50%); } /* Yellow */
-    90% { box-shadow: 0 0 10px hsl(540, 100%, 50%); } /* Green */
-    100% { box-shadow: 0 0 10px hsl(600, 100%, 50%); } /* Blue */
-
+    0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); }
+    10% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
+    20% { box-shadow: 0 0 10px hsl(120, 100%, 50%); }
+    30% { box-shadow: 0 0 10px hsl(180, 100%, 50%); }
+    40% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
+    50% { box-shadow: 0 0 10px hsl(300, 100%, 50%); }
+    60% { box-shadow: 0 0 10px hsl(360, 100%, 50%); }
+    70% { box-shadow: 0 0 10px hsl(420, 100%, 50%); }
+    80% { box-shadow: 0 0 10px hsl(480, 100%, 50%); }
+    90% { box-shadow: 0 0 10px hsl(540, 100%, 50%); }
+    100% { box-shadow: 0 0 10px hsl(600, 100%, 50%); }
 }
 
 #editorContainer {
     display: flex;
-    flex
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top:
