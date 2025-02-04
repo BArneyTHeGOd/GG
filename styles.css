@@ -1,5 +1,5 @@
 body {
-  background-color: #0d4d9e;
+  background-color: #092f5e;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -35,14 +35,14 @@ button {
   margin: 0.3rem;
   border: none;
   border-radius: 8px;
-  background-color: #007BFF;
+  background-color: #ff7a00;
   color: white;
   font-size: 0.8rem; /* Smaller font size */
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #ff3400;
 }
 
 #editorContainer {
@@ -71,6 +71,8 @@ textarea {
   border-radius: 8px;
   font-size: 1rem;
   resize: none;
+  background-color: #092f5e; /* Blue background color */
+  color: white; /* White text color for better contrast */
 }
 
 p {
