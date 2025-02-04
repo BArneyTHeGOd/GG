@@ -1,10 +1,11 @@
 function checkPassword() {
   const password = document.getElementById('passwordInput').value;
-  const correctPassword = 'skbidi'; // Change this to your desired password
+  const correctPassword = 'myPassword'; // Change this to your desired password
 
   if (password === correctPassword) {
-    document.getElementById('message').innerText = 'Open seseme!';
+    document.getElementById('passwordContainer').style.display = 'none';
+    document.getElementById('editorContainer').style.display = 'block';
   } else {
-    document.getElementById('message').innerText = 'Incorrect password. Nice try u monkey.';
+    document.getElementById('message').innerText = 'Incorrect password. Access denied.';
   }
 }
