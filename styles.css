@@ -45,7 +45,7 @@ button {
 
 button:hover {
   background-color: #ff3400; /* Or any hover background color */
-  animation: rainbow-rotate 5s linear infinite; /* Rotating rainbow animation */
+  animation: rainbow-rotate 0.4s linear infinite; /* Rotating rainbow animation */
 }
 
 @keyframes rainbow-rotate {
