@@ -36,10 +36,15 @@ button {
   margin: 0.5rem;
   border: 6px solid transparent; /* Thick, transparent border */
   border-radius: 8px;
-  background-color: #ff7a00;
+  background-color: #ff7a00; /* Or any background color you prefer */
   color: white;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+}
+
+button:hover {
+  background-color: #ff3400; /* Or any hover background color */
   animation: rainbow-rotate 5s linear infinite; /* Rotating rainbow animation */
 }
 
