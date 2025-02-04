@@ -34,7 +34,7 @@ input[type="password"] {
 button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  border: 2px solid transparent; /* Transparent border for the outline effect */
+  border: 6px solid transparent; /* Transparent border for the outline effect */
   border-radius: 8px;
   background-color: #ff7a00;
   color: white;
