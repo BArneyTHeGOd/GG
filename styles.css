@@ -72,7 +72,7 @@ textarea {
   font-size: 1rem;
   resize: none;
   background-color: #092f5e; /* Blue background color */
-  color: white; /* White text color for better contrast */
+  color: #ffffff; /* White text color for better contrast */
 }
 
 p {
