@@ -51,8 +51,8 @@ button:hover {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 50%; /* Set the height to 50% of the screen */
-  margin-top: auto;
+  height: 100%;
+  justify-content: flex-start;
 }
 
 .top-buttons {
@@ -65,7 +65,8 @@ button:hover {
 
 #progressText {
   width: 100%;
-  height: 100%; /* Take up the full height of the container */
+  height: 50%; /* Set the height to 50% of the screen */
+  margin-top: auto; /* Push the text box to the bottom */
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 8px;
