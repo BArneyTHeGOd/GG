@@ -34,21 +34,16 @@ input[type="password"] {
 button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  border: 6px solid transparent; /* Transparent border for the outline effect */
+  border: 6px solid transparent; /* Thick, transparent border */
   border-radius: 8px;
   background-color: #ff7a00;
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: border-color 0.3s ease; /* Smooth border color transition */
+  animation: rainbow-rotate 5s linear infinite; /* Rotating rainbow animation */
 }
 
-button:hover {
-  background-color: #ff3400; /* Keep the original hover background */
-  animation: rainbow-outline 1s linear infinite; /* Apply rainbow outline animation */
-}
-
-@keyframes rainbow-outline {
+@keyframes rainbow-rotate {
   0% { border-color: red; }
   16.67% { border-color: orange; }
   33.33% { border-color: yellow; }
