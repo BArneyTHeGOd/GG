@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const password = prompt('Please enter the password:');
+function checkPassword() {
+  const password = document.getElementById('passwordInput').value;
   const correctPassword = 'Skibidi'; // Change this to your desired password
 
   if (password === correctPassword) {
@@ -7,4 +7,4 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     document.getElementById('message').innerText = 'Incorrect password. Access denied.';
   }
-});
+}
