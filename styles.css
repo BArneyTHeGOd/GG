@@ -1,36 +1,32 @@
-body {
-  background-color: #092f5e;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+/* Add the keyframes for the rainbow outline animation */
+@keyframes rainbowOutline {
+  0% {
+    border-color: red;
+  }
+  14% {
+    border-color: orange;
+  }
+  28% {
+    border-color: yellow;
+  }
+  42% {
+    border-color: green;
+  }
+  57% {
+    border-color: blue;
+  }
+  71% {
+    border-color: indigo;
+  }
+  85% {
+    border-color: violet;
+  }
+  100% {
+    border-color: red;
+  }
 }
 
-#passwordContainer {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  margin-top: 10px;
-}
-
-h1 {
-  color: #333;
-}
-
-input[type="password"] {
-  padding: 0.5rem;
-  margin: 1rem 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 80%;
-  font-size: 1rem;
-}
-
+/* Modify the button hover styles to include the rainbow outline animation */
 button {
   padding: 0.3rem 0.6rem; /* Smaller padding */
   margin: 0.3rem;
@@ -40,42 +36,13 @@ button {
   color: white;
   font-size: 0.8rem; /* Smaller font size */
   cursor: pointer;
+  outline: 3px solid transparent; /* Initial outline color (transparent) */
+  transition: outline-color 0.3s ease;
 }
 
 button:hover {
   background-color: #ff3400;
+  outline-color: red; /* Initial color of the outline */
+  animation: rainbowOutline 2s infinite; /* Apply the rainbow outline animation */
 }
 
-#editorContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-start;
-}
-
-.top-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 10px;
-}
-
-#progressText {
-  width: 100%;
-  height: 50%; /* Set the height to 50% of the screen */
-  margin-top: auto; /* Push the text box to the bottom */
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  text-align: center;
-  background-color: #092f5e; /* Blue background color */
-  color: white; /* White text color for better contrast */
-}
-
-p {
-  font-size: 1.2rem;
-}
