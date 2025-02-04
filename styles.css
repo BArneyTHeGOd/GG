@@ -50,45 +50,20 @@ button:hover {
 }
 
 @keyframes rainbow-strobe {
-    0% { box-shadow: 0 0 10px red; }
-    16.67% { box-shadow: 0 0 10px orange; }
-    33.33% { box-shadow: 0 0 10px yellow; }
-    50% { box-shadow: 0 0 10px green; }
-    66.67% { box-shadow: 0 0 10px blue; }
-    83.33% { box-shadow: 0 0 10px indigo; }
-    100% { box-shadow: 0 0 10px violet; }
+    0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); } /* Red */
+    10% { box-shadow: 0 0 10px hsl(60, 100%, 50%); } /* Orange */
+    20% { box-shadow: 0 0 10px hsl(120, 100%, 50%); } /* Yellow */
+    30% { box-shadow: 0 0 10px hsl(180, 100%, 50%); } /* Green */
+    40% { box-shadow: 0 0 10px hsl(240, 100%, 50%); } /* Blue */
+    50% { box-shadow: 0 0 10px hsl(300, 100%, 50%); } /* Violet */
+    60% { box-shadow: 0 0 10px hsl(360, 100%, 50%); } /* Back to red */
+    70% { box-shadow: 0 0 10px hsl(420, 100%, 50%); } /* Orange */
+    80% { box-shadow: 0 0 10px hsl(480, 100%, 50%); } /* Yellow */
+    90% { box-shadow: 0 0 10px hsl(540, 100%, 50%); } /* Green */
+    100% { box-shadow: 0 0 10px hsl(600, 100%, 50%); } /* Blue */
+
 }
 
 #editorContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-top: 20px;
-    flex-grow: 1;
-}
-
-.top-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-#progressText {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    text-align: center;
-    background-color: #092f5e;
-    color: white;
-    margin-top: auto;
-    flex-shrink: 0;
-}
-
-p {
-    font-size: 1rem;
-}
+    flex
