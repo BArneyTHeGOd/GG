@@ -4,13 +4,13 @@ function checkPassword() {
 
   if (password === correctPassword) {
     document.getElementById('passwordContainer').style.display = 'none';
-    document.getElementById('editorContainer').style.display = 'block';
+    document.getElementById('editorContainer').style.display = 'flex';
   } else {
     document.getElementById('message').innerText = 'Incorrect password. Access denied.';
   }
 }
 
 function redirectToWebsite(url) {
-  // Redirect to the specified external URL
   window.location.href = url;
 }
+
