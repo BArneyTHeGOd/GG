@@ -1,48 +1,93 @@
-/* Add the keyframes for the rainbow outline animation */
-@keyframes rainbowOutline {
-  0% {
-    border-color: red;
-  }
-  14% {
-    border-color: orange;
-  }
-  28% {
-    border-color: yellow;
-  }
-  42% {
-    border-color: green;
-  }
-  57% {
-    border-color: blue;
-  }
-  71% {
-    border-color: indigo;
-  }
-  85% {
-    border-color: violet;
-  }
-  100% {
-    border-color: red;
-  }
+body {
+  background-color: #092f5e;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-/* Modify the button hover styles to include the rainbow outline animation */
+#passwordContainer {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 10px;
+}
+
+h1 {
+  color: #333;
+}
+
+input[type="password"] {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  font-size: 1rem;
+}
+
 button {
-  padding: 0.3rem 0.6rem; /* Smaller padding */
-  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
   border: none;
   border-radius: 8px;
   background-color: #ff7a00;
   color: white;
-  font-size: 0.8rem; /* Smaller font size */
+  font-size: 1rem;
   cursor: pointer;
-  outline: 3px solid transparent; /* Initial outline color (transparent) */
-  transition: outline-color 0.3s ease;
+  transition: background-color 0.3s ease; /* For smooth color change */
 }
 
 button:hover {
   background-color: #ff3400;
-  outline-color: red; /* Initial color of the outline */
-  animation: rainbowOutline 2s infinite; /* Apply the rainbow outline animation */
+  animation: rainbow-strobe 1s linear infinite; /* Rainbow strobe animation */
 }
 
+@keyframes rainbow-strobe {
+  0% { background-color: red; }
+  16.67% { background-color: orange; }
+  33.33% { background-color: yellow; }
+  50% { background-color: green; }
+  66.67% { background-color: blue; }
+  83.33% { background-color: indigo; }
+  100% { background-color: violet; }
+}
+
+#editorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Or a specific max-width if needed */
+  margin-top: 20px;
+  flex-grow: 1; /* To allow the container to grow and fill space */
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#progressText {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #092f5e;
+  color: white;
+  margin-top: auto;  /* Push to bottom if space available */
+  flex-shrink: 0; /* Prevent from shrinking */
+}
+
+p {
+  font-size: 1rem;
+}
