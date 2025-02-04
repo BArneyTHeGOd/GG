@@ -1,6 +1,6 @@
 body {
-    background-color: #092f5e; /* Default (light) mode background */
-    color: white; /* Default (light) mode text color */
+    background-color: #092f5e;
+    color: white;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -8,18 +8,99 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark-mode {
-    background-color: #000; /* Dark mode background */
-    color: #fff; /* Dark mode text color */
+    background-color: #000;
+    color: #fff;
 }
 
-/* ... (rest of your CSS) ... */
+#passwordContainer {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="password"] {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 6px solid transparent;
+    border-radius: 8px;
+    background-color: #ff7a00;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3400;
+    animation: rainbow-rotate 0.4s linear infinite;
+}
+
+@keyframes rainbow-rotate {
+    0% { border-color: red; }
+    16.67% { border-color: orange; }
+    33.33% { border-color: yellow; }
+    50% { border-color: green; }
+    66.67% { border-color: blue; }
+    83.33% { border-color: indigo; }
+    100% { border-color: violet; }
+}
+
+#editorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#progressText {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #092f5e;
+    color: white;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+p {
+    font-size: 1rem;
+}
 
 #darkModeToggle {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -29,13 +110,10 @@ body.dark-mode {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 #darkModeToggle:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
 }
-
-/* Styles for the password container, etc. (from your original CSS) */
-/* ... */
