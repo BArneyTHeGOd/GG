@@ -1,119 +1,93 @@
 body {
-    background-color: #092f5e;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.dark-mode {
-    background-color: #000;
-    color: #fff;
+  background-color: #092f5e;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 #passwordContainer {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin-top: 10px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 10px;
 }
 
 h1 {
-    color: #333;
+  color: #333;
 }
 
 input[type="password"] {
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 80%;
-    font-size: 1rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  font-size: 1rem;
 }
 
 button {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border: 6px solid transparent;
-    border-radius: 8px;
-    background-color: #ff7a00;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff7a00;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* For smooth color change */
 }
 
 button:hover {
-    background-color: #ff3400;
-    animation: rainbow-rotate 0.4s linear infinite;
+  background-color: #ff3400;
+  animation: rainbow-strobe 1s linear infinite; /* Rainbow strobe animation */
 }
 
-@keyframes rainbow-rotate {
-    0% { border-color: red; }
-    16.67% { border-color: orange; }
-    33.33% { border-color: yellow; }
-    50% { border-color: green; }
-    66.67% { border-color: blue; }
-    83.33% { border-color: indigo; }
-    100% { border-color: violet; }
+@keyframes rainbow-strobe {
+  0% { background-color: red; }
+  16.67% { background-color: orange; }
+  33.33% { background-color: yellow; }
+  50% { background-color: green; }
+  66.67% { background-color: blue; }
+  83.33% { background-color: indigo; }
+  100% { background-color: violet; }
 }
 
 #editorContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-top: 20px;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Or a specific max-width if needed */
+  margin-top: 20px;
+  flex-grow: 1; /* To allow the container to grow and fill space */
 }
 
 .top-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 #progressText {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    text-align: center;
-    background-color: #092f5e;
-    color: white;
-    margin-top: auto;
-    flex-shrink: 0;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #092f5e;
+  color: white;
+  margin-top: auto;  /* Push to bottom if space available */
+  flex-shrink: 0; /* Prevent from shrinking */
 }
 
 p {
-    font-size: 1rem;
-}
-
-#darkModeToggle {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#darkModeToggle:hover {
-    background-color: #45a049;
+  font-size: 1rem;
 }
