@@ -14,7 +14,11 @@
     <p id="message"></p>
   </div>
   <div class="container" id="editorContainer" style="display: none;">
-    <textarea id="editor" placeholder="Write anything here..."></textarea>
+    <textarea id="editor" placeholder="Write anything here..." readonly></textarea>
+    <br>
+    <!-- Redirect buttons to external websites -->
+    <button onclick="redirectToWebsite('https://www.example.com')">Visit Example.com</button>
+    <button onclick="redirectToWebsite('https://www.anotherexample.com')">Visit AnotherExample.com</button>
   </div>
   <script src="script.js"></script>
 </body>
