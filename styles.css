@@ -34,37 +34,37 @@ input[type="password"] {
 button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  border: none;
+  border: 2px solid transparent; /* Transparent border for the outline effect */
   border-radius: 8px;
   background-color: #ff7a00;
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* For smooth color change */
+  transition: border-color 0.3s ease; /* Smooth border color transition */
 }
 
 button:hover {
-  background-color: #ff3400;
-  animation: rainbow-strobe 1s linear infinite; /* Rainbow strobe animation */
+  background-color: #ff3400; /* Keep the original hover background */
+  animation: rainbow-outline 1s linear infinite; /* Apply rainbow outline animation */
 }
 
-@keyframes rainbow-strobe {
-  0% { background-color: red; }
-  16.67% { background-color: orange; }
-  33.33% { background-color: yellow; }
-  50% { background-color: green; }
-  66.67% { background-color: blue; }
-  83.33% { background-color: indigo; }
-  100% { background-color: violet; }
+@keyframes rainbow-outline {
+  0% { border-color: red; }
+  16.67% { border-color: orange; }
+  33.33% { border-color: yellow; }
+  50% { border-color: green; }
+  66.67% { border-color: blue; }
+  83.33% { border-color: indigo; }
+  100% { border-color: violet; }
 }
 
 #editorContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%; /* Or a specific max-width if needed */
+  width: 90%;
   margin-top: 20px;
-  flex-grow: 1; /* To allow the container to grow and fill space */
+  flex-grow: 1;
 }
 
 .top-buttons {
@@ -84,8 +84,8 @@ button:hover {
   text-align: center;
   background-color: #092f5e;
   color: white;
-  margin-top: auto;  /* Push to bottom if space available */
-  flex-shrink: 0; /* Prevent from shrinking */
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 p {
