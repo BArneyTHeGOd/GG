@@ -2,13 +2,14 @@ body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
 }
 
-.container {
+#passwordContainer {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
@@ -31,7 +32,7 @@ input[type="password"] {
 
 button {
   padding: 0.5rem 1rem;
-  margin: 1rem 0;
+  margin: 0.5rem;
   border: none;
   border-radius: 8px;
   background-color: #007BFF;
@@ -42,6 +43,33 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+#editorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.top-buttons {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: calc(100% - 50px); /* Adjust height to fit below the buttons */
+  margin-top: 50px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
 }
 
 p {
