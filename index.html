@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get password</title>
+  <title>Password Protected Page</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Enter Password</h1>
+  <div class="container" id="passwordContainer">
+    <h1>Welcome to My Protected Page</h1>
     <input type="password" id="passwordInput" placeholder="Enter password">
     <button onclick="checkPassword()">Submit</button>
     <p id="message"></p>
+  </div>
+  <div class="container" id="editorContainer" style="display: none;">
+    <textarea id="editor" placeholder="Write anything here..."></textarea>
   </div>
   <script src="script.js"></script>
 </body>
