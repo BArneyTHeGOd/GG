@@ -58,13 +58,14 @@ button:hover {
   top: 10px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 textarea {
   width: 100%;
-  height: calc(100% - 50px); /* Adjust height to fit below the buttons */
-  margin-top: 50px;
+  height: calc(100% - 60px); /* Adjust height to fit below the buttons */
+  margin-top: 60px;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 8px;
