@@ -13,7 +13,6 @@ function toggleDarkMode() {
     root.style.setProperty('--button-hover', '#ff3400');
     passwordContainer.classList.remove('dark-mode');
     darkModeStatus.textContent = "Dark mode is currently OFF.";
-    localStorage.setItem('darkMode', 'off');
   } else {
     // Switch to dark mode
     root.style.setProperty('--background', '#092f5e');
@@ -22,33 +21,22 @@ function toggleDarkMode() {
     root.style.setProperty('--button-hover', '#ff3400');
     passwordContainer.classList.add('dark-mode');
     darkModeStatus.textContent = "Dark mode is currently ON.";
-    localStorage.setItem('darkMode', 'on');
   }
 }
 
-// Enable dark mode by default on page load, based on user preference
+// Enable dark mode by default on page load
 window.onload = function () {
   const root = document.documentElement;
   const passwordContainer = document.getElementById('passwordContainer');
   const darkModeStatus = document.getElementById('darkModeStatus');
-  
-  const darkMode = localStorage.getItem('darkMode');
-  
-  if (darkMode === 'on') {
-    root.style.setProperty('--background', '#092f5e');
-    root.style.setProperty('--text-color', '#ffffff');
-    root.style.setProperty('--button-bg', '#ff7a00');
-    root.style.setProperty('--button-hover', '#ff3400');
-    passwordContainer.classList.add('dark-mode');
-    darkModeStatus.textContent = "Dark mode is currently ON.";
-  } else {
-    root.style.setProperty('--background', '#ffffff');
-    root.style.setProperty('--text-color', '#000000');
-    root.style.setProperty('--button-bg', '#ff7a00');
-    root.style.setProperty('--button-hover', '#ff3400');
-    passwordContainer.classList.remove('dark-mode');
-    darkModeStatus.textContent = "Dark mode is currently OFF.";
-  }
+
+  // Set dark mode by default
+  root.style.setProperty('--background', '#092f5e');
+  root.style.setProperty('--text-color', '#ffffff');
+  root.style.setProperty('--button-bg', '#ff7a00');
+  root.style.setProperty('--button-hover', '#ff3400');
+  passwordContainer.classList.add('dark-mode');
+  darkModeStatus.textContent = "Dark mode is currently ON.";
 };
 
 // Password check function
@@ -63,7 +51,6 @@ function checkPassword() {
   } else {
     message.textContent = "Incorrect password. Please try again.";
     message.style.color = "red";
-    document.getElementById('passwordInput').value = ''; // Clear input field after wrong password
   }
 }
 
