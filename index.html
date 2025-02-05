@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Classroom</title>
+  <title>Dark Mode Toggle</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="passwordContainer">
-    <h1>Barney's Eaglercraft Stuff and More</h1>
+    <h2>Enter password</h2>
     <input type="password" id="passwordInput" placeholder="Enter password">
     <button onclick="checkPassword()">Submit</button>
     <p id="message"></p>
   </div>
 
-  <div id="editorContainer" style="display: none;">
+  <div id="editorContainer">
     <div class="top-buttons">
+      <button onclick="redirectToWebsite('https://google.com')">Google</button>
+      <button onclick="redirectToWebsite('https://youtube.com')">YouTube</button>
       <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/Xray%20Ultimate%201.8.zip')">Xray Mod</button>
       <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/%C2%A73%C2%A7lBlue%20128x%20%C2%A76%5BEaglercraft%5D.zip')">Resource Pack Blue</button>
       <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/eag%201_11.html')">Eag 1.11</button>
@@ -31,11 +33,11 @@
       <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">3kh0 Lite 3</button>
       <button onclick="redirectToWebsite('https://halogenv5.vercel.app/')">Halogen v5</button>
     </div>
-    <p id="progressText">This is a work in progress. More mods and sites coming soon!</p>
+    <p id="progressText">Editor progress will appear here.</p>
   </div>
 
-  <!-- Dark Mode Toggle -->
   <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <p id="darkModeStatus">Dark mode is currently ON.</p>
 
   <script src="script.js"></script>
 </body>
