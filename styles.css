@@ -1,5 +1,13 @@
+/* General Styles */
+:root {
+  --background: #092f5e;
+  --text-color: white;
+  --button-bg: #ff7a00;
+  --button-hover: #ff3400;
+}
+
 body {
-  background-color: #092f5e;
+  background-color: var(--background);
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -9,6 +17,11 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: #333;
+}
+
+/* Password Container Styles */
 #passwordContainer {
   background-color: white;
   padding: 2rem;
@@ -16,10 +29,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin-top: 10px;
-}
-
-h1 {
-  color: #333;
 }
 
 input[type="password"] {
@@ -31,12 +40,13 @@ input[type="password"] {
   font-size: 1rem;
 }
 
+/* Button Styles */
 button {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   border: none;
   border-radius: 8px;
-  background-color: #ff7a00;
+  background-color: var(--button-bg);
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -44,11 +54,12 @@ button {
 }
 
 button:hover {
-  background-color: #ff3400;
+  background-color: var(--button-hover);
   animation: rainbow-strobe 1s linear infinite;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Rainbow Effect Keyframes */
 @keyframes rainbow-strobe {
   0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); }
   10% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
@@ -63,6 +74,7 @@ button:hover {
   100% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
 }
 
+/* Editor Container Styles */
 #editorContainer {
   display: flex;
   flex-direction: column;
@@ -91,8 +103,8 @@ button:hover {
   border-radius: 8px;
   font-size: 1.2rem;
   text-align: center;
-  background-color: #092f5e; /* Blue background color */
-  color: white; /* White text color for better contrast */
+  background-color: var(--background); /* Blue background color */
+  color: var(--text-color); /* White text color for better contrast */
 }
 
 p {
