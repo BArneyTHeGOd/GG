@@ -60,21 +60,6 @@ button:hover {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Rainbow Effect Keyframes */
-@keyframes rainbow-strobe {
-  0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); }
-  10% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
-  20% { box-shadow: 0 0 10px hsl(120, 100%, 50%); }
-  30% { box-shadow: 0 0 10px hsl(180, 100%, 50%); }
-  40% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
-  50% { box-shadow: 0 0 10px hsl(300, 100%, 50%); }
-  60% { box-shadow: 0 0 10px hsl(360, 100%, 50%); }
-  70% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
-  80% { box-shadow: 0 0 10px hsl(120, 100%, 50%); }
-  90% { box-shadow: 0 0 10px hsl(180, 100%, 50%); }
-  100% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
-}
-
 /* Editor Container Styles */
 #editorContainer {
   display: flex;
