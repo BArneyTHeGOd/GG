@@ -1,112 +1,71 @@
-/* General Styles */
-:root {
-  --background: #092f5e;
-  --text-color: white;
-  --button-bg: #ff7a00;
-  --button-hover: #ff3400;
+body {
+    background-color: #092f5e;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Ensure body covers full viewport height */
+    margin: 0;
 }
 
-body {
-  background-color: var(--background);
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 100vh; /* Ensure body covers full viewport height */
-  margin: 0;
+#passwordContainer {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 10px;
 }
 
 h1 {
-  color: #333;
-}
-
-/* Password Container Styles */
-#passwordContainer {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  margin-top: 10px;
+    color: #333;
 }
 
 input[type="password"] {
-  padding: 0.5rem;
-  margin: 1rem 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 80%;
-  font-size: 1rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    font-size: 1rem;
 }
 
-/* Button Styles */
 button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border: none;
-  border-radius: 8px;
-  background-color: var(--button-bg);
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff7a00;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--button-hover);
-  animation: rainbow-strobe 1s linear infinite;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-color: #ff3400;
+    animation: rainbow-strobe 1s linear infinite;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Rainbow Effect Keyframes */
 @keyframes rainbow-strobe {
-  0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); }
-  10% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
-  20% { box-shadow: 0 0 10px hsl(120, 100%, 50%); }
-  30% { box-shadow: 0 0 10px hsl(180, 100%, 50%); }
-  40% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
-  50% { box-shadow: 0 0 10px hsl(300, 100%, 50%); }
-  60% { box-shadow: 0 0 10px hsl(360, 100%, 50%); }
-  70% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
-  80% { box-shadow: 0 0 10px hsl(120, 100%, 50%); }
-  90% { box-shadow: 0 0 10px hsl(180, 100%, 50%); }
-  100% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
+    0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); }
+    10% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
+    20% { box-shadow: 0 0 10px hsl(120, 100%, 50%); }
+    30% { box-shadow: 0 0 10px hsl(180, 100%, 50%); }
+    40% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
+    50% { box-shadow: 0 0 10px hsl(300, 100%, 50%); }
+    60% { box-shadow: 0 0 10px hsl(360, 100%, 50%); }
+    70% { box-shadow: 0 0 10px hsl(420, 100%, 50%); }
+    80% { box-shadow: 0 0 10px hsl(480, 100%, 50%); }
+    90% { box-shadow: 0 0 10px hsl(540, 100%, 50%); }
+    100% { box-shadow: 0 0 10px hsl(600, 100%, 50%); }
 }
 
-/* Editor Container Styles */
 #editorContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-start;
-}
-
-.top-buttons {
-  position: relative;
-  top: 10px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 10px;
-}
-
-#progressText {
-  width: 100%;
-  height: 50%; /* Set the height to 50% of the screen */
-  margin-top: auto; /* Push the text box to the bottom */
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  text-align: center;
-  background-color: var(--background); /* Blue background color */
-  color: var(--text-color); /* White text color for better contrast */
-}
-
-p {
-  font-size: 1.2rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top:
