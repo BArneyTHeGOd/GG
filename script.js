@@ -1,4 +1,4 @@
-// Password check function
+// Password check function 
 function checkPassword() {
   const password = document.getElementById('passwordInput').value;
   const correctPassword = 'dayone'; // Set the correct password
