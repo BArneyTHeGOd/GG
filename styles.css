@@ -101,3 +101,34 @@ button:hover {
   font-size: 1rem;
   font-weight: bold;
 }
+
+/* Dark Mode Button with Rainbow Effect and Shadow */
+#darkModeToggle {
+  margin-top: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: rainbow 3s linear infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow */
+}
+
+/* Rainbow animation */
+@keyframes rainbow {
+  0% { background-color: #ff7a00; }
+  14% { background-color: #ff0000; }
+  28% { background-color: #ff00ff; }
+  42% { background-color: #0000ff; }
+  57% { background-color: #00ffff; }
+  71% { background-color: #00ff00; }
+  85% { background-color: #ffff00; }
+  100% { background-color: #ff7a00; }
+}
+
+#darkModeToggle:hover {
+  background-color: #ff3400;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
