@@ -57,6 +57,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: rainbowShadow 2s infinite; /* Rainbow shadow animation */
 }
 
 button:hover {
@@ -93,42 +94,27 @@ button:hover {
   text-align: center;
   background-color: var(--background);
   color: var(--text-color);
+  position: absolute;
+  bottom: 20px; /* Move it to the bottom */
 }
 
-/* Dark mode status text */
 #darkModeStatus {
   margin-top: 20px;
   font-size: 1rem;
   font-weight: bold;
+  position: absolute;
+  bottom: 60px; /* Move it to the bottom right */
+  right: 20px;
 }
 
-/* Dark Mode Button with Rainbow Effect and Shadow */
-#darkModeToggle {
-  margin-top: 20px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #ff7a00;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  animation: rainbow 3s linear infinite;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow */
-}
-
-/* Rainbow animation */
-@keyframes rainbow {
-  0% { background-color: #ff7a00; }
-  14% { background-color: #ff0000; }
-  28% { background-color: #ff00ff; }
-  42% { background-color: #0000ff; }
-  57% { background-color: #00ffff; }
-  71% { background-color: #00ff00; }
-  85% { background-color: #ffff00; }
-  100% { background-color: #ff7a00; }
-}
-
-#darkModeToggle:hover {
-  background-color: #ff3400;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+/* Rainbow shadow effect */
+@keyframes rainbowShadow {
+  0% { box-shadow: 0 0 10px red; }
+  14% { box-shadow: 0 0 10px orange; }
+  28% { box-shadow: 0 0 10px yellow; }
+  42% { box-shadow: 0 0 10px green; }
+  57% { box-shadow: 0 0 10px blue; }
+  71% { box-shadow: 0 0 10px indigo; }
+  85% { box-shadow: 0 0 10px violet; }
+  100% { box-shadow: 0 0 10px red; }
 }
