@@ -18,16 +18,18 @@ function redirectToWebsite(url) {
 
 function toggleDarkMode() {
   const root = document.documentElement;
-  const isDark = root.style.getPropertyValue('--background') === '#092f5e';
+  const isDarkMode = root.style.getPropertyValue('--background') === '#092f5e';
 
-  if (isDark) {
-    root.style.setProperty('--background', 'white');
-    root.style.setProperty('--text-color', 'black');
+  if (isDarkMode) {
+    // Switch to Light Mode
+    root.style.setProperty('--background', '#ffffff');
+    root.style.setProperty('--text-color', '#000000');
     root.style.setProperty('--button-bg', '#007bff');
     root.style.setProperty('--button-hover', '#0056b3');
   } else {
+    // Switch to Dark Mode
     root.style.setProperty('--background', '#092f5e');
-    root.style.setProperty('--text-color', 'white');
+    root.style.setProperty('--text-color', '#ffffff');
     root.style.setProperty('--button-bg', '#ff7a00');
     root.style.setProperty('--button-hover', '#ff3400');
   }
