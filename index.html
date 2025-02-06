@@ -3,29 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classroom</title>
+  <title>Dark Mode Toggle</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Password container -->
   <div id="passwordContainer">
-    <h2 style="color: black;">Enter password</h2>
+    <h2>Enter password</h2>
     <input type="password" id="passwordInput" placeholder="Enter password">
     <button onclick="checkPassword()">Submit</button>
     <p id="message"></p>
   </div>
 
-  <!-- Editor container (hidden initially) -->
-  <div id="editorContainer" style="display: none;">
-    <button onclick="redirectToWebsite('https://google.com')">Google</button>
-    <button onclick="redirectToWebsite('https://youtube.com')">YouTube</button>
-    <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/Xray%20Ultimate%201.8.zip')">Xray Mod</button>
-    <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/%C2%A73%C2%A7lBlue%20128x%20%C2%A76%5BEaglercraft%5D.zip')">Resource Pack Blue</button>
-    <button onclick="redirectToWebsite('https://cena-math.vercel.app/')">Astrogames Reboot</button>
-    <button onclick="redirectToWebsite('https://english-learning-pro.vercel.app')">Faf Games</button>
-    <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">Faf Games 2</button>
-    <p id="darkModeStatus">Dark mode is currently ON.</p>
-    <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <!-- Editor buttons on top -->
+  <div id="editorContainer">
+    <div class="top-buttons">
+      <button onclick="redirectToWebsite('https://google.com')">Google</button>
+      <button onclick="redirectToWebsite('https://youtube.com')">YouTube</button>
+      <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/Xray%20Ultimate%201.8.zip')">Xray Mod</button>
+      <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/%C2%A73%C2%A7lBlue%20128x%20%C2%A76%5BEaglercraft%5D.zip')">Resource Pack Blue</button>
+      <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/eag%201_11.html')">Eag 1.11</button>
+      <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/EaglercraftL_1.9_Offline_en_US.html')">Eag 1.9</button>
+      <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/flGood_Question_bfl32xb.zip')">Resource Pack Red</button>
+      <button onclick="redirectToWebsite('https://cena-math.vercel.app/')">Astrogames Reboot</button>
+      <button onclick="redirectToWebsite('https://english-learning-pro.vercel.app')">Faf Games</button>
+      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">Faf Games 2</button>
+      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">Faf Games 3</button>
+      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">Faf Games 4</button>
+      <button onclick="redirectToWebsite('https://3kh0.vercel.app/')">3kh0 Lite 1</button>
+      <button onclick="redirectToWebsite('https://3kh0.vercel.app/')">3kh0 Lite 2</button>
+      <button onclick="redirectToWebsite('https://3kh0.vercel.app/')">3kh0 Lite 3</button>
+      <button onclick="redirectToWebsite('https://halogenv5.vercel.app/')">Halogen v5</button>
+    </div>
+  </div>
+
+  <!-- Dark mode button -->
+  <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <p id="darkModeStatus">Dark mode is currently ON.</p>
+
+  <!-- Editable text at the bottom-right -->
+  <div id="progressTextContainer">
+    <p id="progressText">Editor progress will appear here.</p>
   </div>
 
   <script src="script.js"></script>
