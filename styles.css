@@ -1,83 +1,83 @@
-/* Root variables for theming */
+/* Root variables for theme colors */
 :root {
-  --background: #092f5e; /* Default dark mode background */
-  --text-color: #ffffff; /* Default dark mode text color */
-  --button-bg: #ff7a00; /* Default dark mode button color */
-  --button-hover: #ff3400; /* Dark mode button hover color */
+  --background: #092f5e; /* Dark background */
+  --text-color: #ffffff; /* Dark text color */
+  --button-bg: #ff7a00;  /* Button background */
+  --button-hover: #ff3400; /* Button hover effect */
 }
 
-.light-mode {
-  --background: #ffffff; /* Light mode background */
-  --text-color: #000000; /* Light mode text color */
-  --button-bg: #007bff; /* Light mode button color */
-  --button-hover: #0056b3; /* Light mode button hover */
-}
-
-/* Global Styles */
+/* Global styles */
 body {
   background-color: var(--background);
-  color: var(--text-color);
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Password Container */
+/* Password input container */
 #passwordContainer {
   background-color: white;
-  padding: 2rem;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-top: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#passwordContainer:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Inputs */
 input[type="password"] {
-  padding: 0.5rem;
-  margin: 1rem 0;
-  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
   border-radius: 8px;
   width: 80%;
   font-size: 1rem;
 }
 
-/* Buttons */
 button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
+  padding: 10px 20px;
+  margin: 10px;
   border: none;
   border-radius: 8px;
   background-color: var(--button-bg);
-  color: var(--text-color);
+  color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Rainbow shadow effect */
 button:hover {
   background-color: var(--button-hover);
-  transform: scale(1.1);
+  animation: rainbow-shadow 1s linear infinite;
 }
 
-/* Animations */
-.fade-in {
-  animation: fade-in 1s ease-in-out;
+@keyframes rainbow-shadow {
+  0% { box-shadow: 0 0 10px hsl(0, 100%, 50%); }
+  20% { box-shadow: 0 0 10px hsl(60, 100%, 50%); }
+  40% { box-shadow: 0 0 10px hsl(120, 100%, 50%); }
+  60% { box-shadow: 0 0 10px hsl(180, 100%, 50%); }
+  80% { box-shadow: 0 0 10px hsl(240, 100%, 50%); }
+  100% { box-shadow: 0 0 10px hsl(360, 100%, 50%); }
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Editor container */
+#editorContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
+/* Dark mode styles */
+#editorContainer.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark mode status */
+#darkModeStatus {
+  margin-top: 10px;
+  font-size: 1rem;
+}
