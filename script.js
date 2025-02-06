@@ -22,18 +22,27 @@ function redirectToWebsite(url) {
 
 // Toggle dark mode function
 function toggleDarkMode() {
-  const body = document.body;
-  const isDarkMode = body.classList.contains('dark-mode');
+  const root = document.documentElement;
+  const passwordContainer = document.getElementById('passwordContainer');
+  const progressText = document.getElementById('progressText');
+  const darkModeStatus = document.getElementById('darkModeStatus');
 
+  const isDarkMode = root.classList.contains('light-mode');
   if (isDarkMode) {
-    // Switch to light mode
-    body.classList.remove('dark-mode');
-    body.style.backgroundColor = '#ffffff';
-    body.style.color = '#000000';
+    root.classList.remove('light-mode');
+    darkModeStatus.textContent = "Dark mode is currently ON.";
+    progressText.style.color = "white";
   } else {
-    // Switch to dark mode
-    body.classList.add('dark-mode');
-    body.style.backgroundColor = '#092f5e';
-    body.style.color = '#ffffff';
+    root.classList.add('light-mode');
+    darkModeStatus.textContent = "Dark mode is currently OFF.";
+    progressText.style.color = "black";
   }
 }
+
+// Enable dark mode by default on page load
+window.onload = function () {
+  const root = document.documentElement;
+  const progressText = document.getElementById('progressText');
+  root.classList.remove('light-mode'); // Default is dark mode
+  progressText.style.color = "white";
+};
