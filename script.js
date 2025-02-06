@@ -1,38 +1,39 @@
-// Password check function
+// Password check function 
 function checkPassword() {
   const password = document.getElementById('passwordInput').value;
-  const correctPassword = 'dayone'; // Correct password
+  const correctPassword = 'dayone'; // Set the correct password
   const message = document.getElementById('message');
 
   if (password === correctPassword) {
+    // Hide the password container and show the editor container
     document.getElementById('passwordContainer').style.display = 'none';
-    document.getElementById('editorContainer').style.display = 'flex'; // Show the editor container
+    document.getElementById('editorContainer').style.display = 'block';
   } else {
+    // Display an error message if the password is incorrect
     message.textContent = "Incorrect password. Please try again.";
     message.style.color = "red";
   }
 }
 
-// Redirect to a website in a new tab
+// Redirect to a URL in a new tab
 function redirectToWebsite(url) {
   window.open(url, '_blank');
 }
 
-// Toggle dark mode
+// Toggle dark mode function
 function toggleDarkMode() {
   const root = document.documentElement;
+  const passwordContainer = document.getElementById('passwordContainer');
   const darkModeStatus = document.getElementById('darkModeStatus');
-  const editorContainer = document.getElementById('editorContainer');
-  
   const isDarkMode = root.style.getPropertyValue('--background') === '#092f5e';
 
   if (isDarkMode) {
     // Switch to light mode
     root.style.setProperty('--background', '#ffffff');
     root.style.setProperty('--text-color', '#000000');
-    root.style.setProperty('--button-bg', '#007bff'); // Blue button
-    root.style.setProperty('--button-hover', '#0056b3');
-    editorContainer.classList.remove('dark-mode');
+    root.style.setProperty('--button-bg', '#ff7a00');
+    root.style.setProperty('--button-hover', '#ff3400');
+    passwordContainer.classList.remove('dark-mode');
     darkModeStatus.textContent = "Dark mode is currently OFF.";
   } else {
     // Switch to dark mode
@@ -40,7 +41,7 @@ function toggleDarkMode() {
     root.style.setProperty('--text-color', '#ffffff');
     root.style.setProperty('--button-bg', '#ff7a00');
     root.style.setProperty('--button-hover', '#ff3400');
-    editorContainer.classList.add('dark-mode');
+    passwordContainer.classList.add('dark-mode');
     darkModeStatus.textContent = "Dark mode is currently ON.";
   }
 }
@@ -48,10 +49,14 @@ function toggleDarkMode() {
 // Enable dark mode by default on page load
 window.onload = function () {
   const root = document.documentElement;
+  const passwordContainer = document.getElementById('passwordContainer');
   const darkModeStatus = document.getElementById('darkModeStatus');
+
+  // Set dark mode by default
   root.style.setProperty('--background', '#092f5e');
   root.style.setProperty('--text-color', '#ffffff');
   root.style.setProperty('--button-bg', '#ff7a00');
   root.style.setProperty('--button-hover', '#ff3400');
+  passwordContainer.classList.add('dark-mode');
   darkModeStatus.textContent = "Dark mode is currently ON.";
 };
