@@ -42,7 +42,6 @@ function toggleDarkMode() {
 // Enable dark mode by default on page load
 window.onload = function () {
   const root = document.documentElement;
-  const progressText = document.getElementById('progressText');
   root.classList.remove('light-mode'); // Default is dark mode
-  progressText.style.color = "white";
+  document.getElementById('progressText').style.color = "white"; // Text color in dark mode
 };
