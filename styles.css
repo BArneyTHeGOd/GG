@@ -1,4 +1,4 @@
-/* General body styling */
+/* General Body Styling */
 body {
     background-color: #092f5e;
     font-family: Arial, sans-serif;
@@ -11,7 +11,7 @@ body {
     color: white;
 }
 
-/* Password container styling */
+/* Password Section Styling */
 #passwordContainer {
     background-color: white;
     padding: 2rem;
@@ -21,13 +21,11 @@ body {
     margin-top: 10px;
 }
 
-/* Headings styling */
-h1, h2 {
+#passwordContainer h2 {
     color: #333;
 }
 
-/* Input field for password */
-input[type="password"] {
+#passwordInput {
     padding: 0.5rem;
     margin: 1rem 0;
     border: 1px solid #ccc;
@@ -36,7 +34,7 @@ input[type="password"] {
     font-size: 1rem;
 }
 
-/* Button styling */
+/* Buttons Styling */
 button {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
@@ -49,15 +47,16 @@ button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for buttons with animated rainbow shadow */
+/* Rainbow Shadow on Hover */
 button:hover {
     background-color: #ff3400;
-    box-shadow: 0 0 10px 5px hsl(0, 100%, 50%), 0 0 20px 10px hsl(120, 100%, 50%), 
+    box-shadow: 0 0 10px 5px hsl(0, 100%, 50%), 
+                0 0 20px 10px hsl(120, 100%, 50%), 
                 0 0 30px 15px hsl(240, 100%, 50%);
     animation: rainbow-glow 2s infinite linear;
 }
 
-/* Keyframes for rainbow glow animation */
+/* Rainbow Keyframes */
 @keyframes rainbow-glow {
     0% { box-shadow: 0 0 10px 5px hsl(0, 100%, 50%); }
     33% { box-shadow: 0 0 10px 5px hsl(120, 100%, 50%); }
@@ -65,7 +64,7 @@ button:hover {
     100% { box-shadow: 0 0 10px 5px hsl(360, 100%, 50%); }
 }
 
-/* Editor container for buttons and progress text */
+/* Editor Section Styling */
 #editorContainer {
     display: flex;
     flex-direction: column;
@@ -74,32 +73,10 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Progress text styling */
+/* Progress Text Styling */
 #progressText {
-    margin-top: auto;
+    margin-top: 20px;
     padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    text-align: center;
-    background-color: white;
-    color: black;
-}
-
-/* Dark mode toggle button styling */
-#darkModeToggle {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    padding: 0.5rem 1rem;
-    border-radius: 12px;
-    background-color: #ff7a00;
+    font-size: 1rem;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#darkModeToggle:hover {
-    background-color: #ff3400;
-    box-shadow: 0 0 10px 5px hsl(60, 100%, 50%);
 }
