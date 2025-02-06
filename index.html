@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- Password Input Section -->
-  <div id="passwordContainer" class="fade-in">
+  <div id="passwordContainer">
     <h2>Enter Password</h2>
     <input type="password" id="passwordInput" placeholder="Enter password">
     <button onclick="checkPassword()">Submit</button>
@@ -16,7 +16,7 @@
   </div>
 
   <!-- Main Editor Section -->
-  <div id="editorContainer" class="fade-in">
+  <div id="editorContainer" style="display: none;">
     <div class="top-buttons">
       <button onclick="redirectToWebsite('https://google.com')">Google</button>
       <button onclick="redirectToWebsite('https://youtube.com')">YouTube</button>
@@ -39,8 +39,8 @@
   </div>
 
   <!-- Dark Mode Toggle -->
-  <button id="darkModeToggle" class="slide-up" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  <p id="darkModeStatus" class="fade-in">Dark mode is currently ON.</p>
+  <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <p id="darkModeStatus">Dark mode is currently ON.</p>
 
   <script src="script.js"></script>
 </body>
