@@ -22,23 +22,18 @@ function redirectToWebsite(url) {
 
 // Toggle dark mode function
 function toggleDarkMode() {
-  const root = document.documentElement;
-  const isDarkMode = root.style.getPropertyValue('--background') === '#092f5e';
+  const body = document.body;
+  const isDarkMode = body.classList.contains('dark-mode');
 
   if (isDarkMode) {
     // Switch to light mode
-    root.style.setProperty('--background', '#ffffff');
-    root.style.setProperty('--text-color', '#000000');
+    body.classList.remove('dark-mode');
+    body.style.backgroundColor = '#ffffff';
+    body.style.color = '#000000';
   } else {
     // Switch to dark mode
-    root.style.setProperty('--background', '#092f5e');
-    root.style.setProperty('--text-color', '#ffffff');
+    body.classList.add('dark-mode');
+    body.style.backgroundColor = '#092f5e';
+    body.style.color = '#ffffff';
   }
 }
-
-// Enable dark mode by default on page load
-window.onload = function () {
-  const root = document.documentElement;
-  root.style.setProperty('--background', '#092f5e');
-  root.style.setProperty('--text-color', '#ffffff');
-};
