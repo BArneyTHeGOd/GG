@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Page with Rainbow Effect</title>
+  <title>Dark Mode with Animations</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Password Input Section -->
-  <div id="passwordContainer">
-    <h2>Enter Password</h2>
+  <div id="passwordContainer" class="fade-in">
+    <h2>Enter password</h2>
     <input type="password" id="passwordInput" placeholder="Enter password">
     <button onclick="checkPassword()">Submit</button>
     <p id="message"></p>
   </div>
 
-  <!-- Editor Section -->
-  <div id="editorContainer" style="display: none;">
-    <h1>Welcome to the Editor!</h1>
-    <div class="button-group">
+  <div id="editorContainer" class="fade-in">
+    <div class="top-buttons">
       <button onclick="redirectToWebsite('https://google.com')">Google</button>
       <button onclick="redirectToWebsite('https://youtube.com')">YouTube</button>
       <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/Xray%20Ultimate%201.8.zip')">Xray Mod</button>
@@ -27,20 +24,12 @@
       <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/EaglercraftL_1.9_Offline_en_US.html')">Eag 1.9</button>
       <button onclick="redirectToWebsite('https://github.com/BArneyTHeGOd/dodo/raw/refs/heads/main/flGood_Question_bfl32xb.zip')">Resource Pack Red</button>
       <button onclick="redirectToWebsite('https://cena-math.vercel.app/')">Astrogames Reboot</button>
-      <button onclick="redirectToWebsite('https://english-learning-pro.vercel.app')">Faf Games</button>
-      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">Faf Games 2</button>
-      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">Faf Games 3</button>
-      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">Faf Games 4</button>
-      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">3kh0 Lite 1</button>
-      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">3kh0 Lite 2</button>
-      <button onclick="redirectToWebsite('https://fattymokeypopowe.vercel.app/')">3kh0 Lite 3</button>
-      <button onclick="redirectToWebsite('https://halogenv5.vercel.app/')">Halogen v5</button>
     </div>
     <p id="progressText">Editor progress will appear here.</p>
   </div>
 
-  <!-- Dark Mode Toggle -->
-  <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <button id="darkModeToggle" class="slide-up" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <p id="darkModeStatus" class="fade-in">Dark mode is currently ON.</p>
 
   <script src="script.js"></script>
 </body>
