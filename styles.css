@@ -1,82 +1,91 @@
-/* General Body Styling */
+/* Root variables for theming */
+:root {
+  --background: #092f5e; /* Default dark mode background */
+  --text-color: #ffffff; /* Default dark mode text color */
+  --button-bg: #ff7a00; /* Default dark mode button color */
+  --button-hover: #ff3400; /* Dark mode button hover color */
+}
+
+.light-mode {
+  --background: #ffffff; /* Light mode background */
+  --text-color: #000000; /* Light mode text color */
+  --button-bg: #007bff; /* Light mode button color */
+  --button-hover: #0056b3; /* Light mode button hover */
+}
+
+/* Global Styles */
 body {
-    background-color: #092f5e;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Password Section Styling */
+/* Password Container */
 #passwordContainer {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin-top: 10px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#passwordContainer h2 {
-    color: #333;
+#passwordContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-#passwordInput {
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 80%;
-    font-size: 1rem;
+/* Inputs */
+input[type="password"] {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  font-size: 1rem;
 }
 
-/* Buttons Styling */
+/* Buttons */
 button {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #ff7a00;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Rainbow Shadow on Hover */
 button:hover {
-    background-color: #ff3400;
-    box-shadow: 0 0 10px 5px hsl(0, 100%, 50%), 
-                0 0 20px 10px hsl(120, 100%, 50%), 
-                0 0 30px 15px hsl(240, 100%, 50%);
-    animation: rainbow-glow 2s infinite linear;
+  background-color: var(--button-hover);
+  transform: scale(1.1);
 }
 
-/* Rainbow Keyframes */
-@keyframes rainbow-glow {
-    0% { box-shadow: 0 0 10px 5px hsl(0, 100%, 50%); }
-    33% { box-shadow: 0 0 10px 5px hsl(120, 100%, 50%); }
-    66% { box-shadow: 0 0 10px 5px hsl(240, 100%, 50%); }
-    100% { box-shadow: 0 0 10px 5px hsl(360, 100%, 50%); }
+/* Animations */
+.fade-in {
+  animation: fade-in 1s ease-in-out;
 }
 
-/* Editor Section Styling */
-#editorContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-top: 20px;
+.slide-up {
+  animation: slide-up 1s ease-in-out;
 }
 
-/* Progress Text Styling */
-#progressText {
-    margin-top: 20px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    color: white;
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
